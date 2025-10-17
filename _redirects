@@ -1,0 +1,6 @@
+# Forza HTTPS
+http://* https://:splat 301!
+
+# Imposta dominio canonico (solo una delle due righe qui sotto)
+
+# https://addettiantincendio.it/* https://www.addettiantincendio.it/:splat 301!
