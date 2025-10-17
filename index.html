@@ -3,9 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Addetti Antincendio – Corso pratico a norme D.M. 2/9/2021</title>
-  <meta name="description" content="Corsi antincendio per aziende in Piemonte: livelli 1-2-3 secondo D.M. 2/9/2021. Formazione in sede o on‑site, prezzi chiari, rilascio attestato. Richiedi un preventivo immediato." />
+  <meta name="description" content="Corsi antincendio per aziende in Piemonte: livelli 1-2-3 secondo D.M. 2/9/2021. Formazione in sede o on-site, prezzi chiari, rilascio attestato. Richiedi un preventivo immediato." />
   <link rel="canonical" href="https://www.addettiantincendio.it/" />
+
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Addetti Antincendio – Corsi rapidi e certificati" />
@@ -13,15 +15,24 @@
   <meta property="og:image" content="/og-cover.jpg" />
   <meta property="og:url" content="https://www.addettiantincendio.it/" />
   <meta name="twitter:card" content="summary_large_image" />
-  
-  <!-- Tailwind (CDN) per prototipo; in produzione puoi passare a build locale -->
+
+  <!-- Favicon esplicita (evita richieste implicite non https) -->
+  <link rel="icon" href="/favicon.ico" />
+
+  <!-- Sicurezza lato client (auto-upgrade a HTTPS) -->
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+  <!-- Performance: preconnect a CDN -->
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+
+  <!-- Tailwind (CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
-    /* Micro-ottimizzazioni */
     html { scroll-behavior: smooth; }
     .container { max-width: 1120px; }
   </style>
-  
+
   <!-- Schema.org (JSON-LD) -->
   <script type="application/ld+json">
   {
@@ -32,13 +43,9 @@
     "areaServed": "Piemonte",
     "description": "Corsi addetti antincendio livelli 1, 2, 3 secondo D.M. 2/9/2021 con prove pratiche e rilascio attestato.",
     "telephone": "+39 333 000 0000",
-    "sameAs": [
-      "https://www.linkedin.com/"
-    ]
+    "sameAs": ["https://www.linkedin.com/"]
   }
   </script>
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-
 </head>
 <body class="bg-white text-slate-900">
   <!-- Header sticky -->
@@ -50,7 +57,7 @@
       </div>
       <nav class="hidden md:flex items-center gap-6 text-sm">
         <a href="#vantaggi" class="hover:text-red-600">Perché noi</a>
-        <a href="#livelli" class="hover:text-red-600">Livelli 1‑2‑3</a>
+        <a href="#livelli" class="hover:text-red-600">Livelli 1-2-3</a>
         <a href="#prezzi" class="hover:text-red-600">Prezzi</a>
         <a href="#faq" class="hover:text-red-600">FAQ</a>
       </nav>
@@ -65,10 +72,10 @@
     <div class="container mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-8 items-center">
       <div>
         <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">Corsi Addetti Antincendio <span class="text-red-600">rapidi e certificati</span> in Piemonte</h1>
-        <p class="mt-4 text-lg text-slate-700">Livelli 1‑2‑3 secondo <span class="font-semibold">D.M. 2/9/2021</span>. Docenti qualificati, pratica con estintori, attestati validi. In sede o nella tua azienda.</p>
+        <p class="mt-4 text-lg text-slate-700">Livelli 1-2-3 secondo <span class="font-semibold">D.M. 2/9/2021</span>. Docenti qualificati, pratica con estintori, attestati validi. In sede o nella tua azienda.</p>
         <div class="mt-6 flex flex-wrap gap-3">
           <a href="#preventivo" class="px-5 py-3 rounded-xl bg-red-600 text-white font-semibold">Richiedi preventivo</a>
-          <a href="https://wa.me/393330000000?text=Ciao!%20Vorrei%20un%20preventivo%20per%20un%20corso%20antincendio" class="px-5 py-3 rounded-xl border font-semibold">WhatsApp</a>
+          <a href="https://wa.me/393330000000?text=Ciao!%20Vorrei%20un%20preventivo%20per%20un%20corso%20antincendio" class="px-5 py-3 rounded-xl border font-semibold" rel="noopener">WhatsApp</a>
           <a href="tel:+393330000000" class="px-5 py-3 rounded-xl border font-semibold">Chiama</a>
         </div>
         <p class="mt-3 text-sm text-slate-500">Tempi rapidi • Docenti con esperienza • Report e attestati inclusi</p>
@@ -120,7 +127,7 @@
     </div>
   </section>
 
-  <!-- Prezzi (placeholder commerciale, senza listini fissi) -->
+  <!-- Prezzi -->
   <section id="prezzi" class="py-14 border-t bg-slate-50">
     <div class="container mx-auto px-4">
       <h2 class="text-2xl md:text-3xl font-bold">Quanto costa?</h2>
@@ -165,7 +172,7 @@
           <input name="telefono" class="mt-1 w-full border rounded-xl px-3 py-2" />
         </div>
         <div class="md:col-span-2">
-          <label class="text-sm">Messaggio (livello 1‑2‑3, n. partecipanti, sede)</label>
+          <label class="text-sm">Messaggio (livello 1-2-3, n. partecipanti, sede)</label>
           <textarea required name="messaggio" rows="4" class="mt-1 w-full border rounded-xl px-3 py-2"></textarea>
         </div>
         <div class="md:col-span-2 flex items-center gap-3">
@@ -176,29 +183,28 @@
           <button class="px-5 py-3 rounded-xl bg-red-600 text-white font-semibold">Invia richiesta</button>
         </div>
       </form>
-      <p class="mt-2 text-xs text-slate-500">Compilando il form autorizzi il trattamento dei dati per rispondere alla tua richiesta.
-      </p>
+      <p class="mt-2 text-xs text-slate-500">Compilando il form autorizzi il trattamento dei dati per rispondere alla tua richiesta.</p>
     </div>
   </section>
 
-  <!-- FAQ sintetiche -->
+  <!-- FAQ -->
   <section id="faq" class="py-14 border-t">
     <div class="container mx-auto px-4">
       <h2 class="text-2xl md:text-3xl font-bold">Domande frequenti</h2>
-      <div class="mt-6 grid gap-4">
-        <details class="p-4 rounded-xl border">
-          <summary class="font-semibold cursor-pointer">Gli attestati sono validi?</summary>
-          <p class="mt-2 text-slate-700">Sì: programmi e registri conformi alla normativa vigente. Rilasciamo attestati nominativi dopo verifica presenze e superamento prova di apprendimento.</p>
-        </details>
-        <details class="p-4 rounded-xl border">
-          <summary class="font-semibold cursor-pointer">Fate anche aggiornamenti?</summary>
-          <p class="mt-2 text-slate-700">Sì, per tutti i livelli (1‑2‑3) con durate previste dal D.M. 2/9/2021.</p>
-        </details>
-        <details class="p-4 rounded-xl border">
-          <summary class="font-semibold cursor-pointer">È possibile farlo presso la nostra sede?</summary>
-          <p class="mt-2 text-slate-700">Certo. Portiamo noi attrezzatura e materiali per le esercitazioni pratiche.</p>
-        </details>
-      </div>
+    <div class="mt-6 grid gap-4">
+      <details class="p-4 rounded-xl border">
+        <summary class="font-semibold cursor-pointer">Gli attestati sono validi?</summary>
+        <p class="mt-2 text-slate-700">Sì: programmi e registri conformi alla normativa vigente. Rilasciamo attestati nominativi dopo verifica presenze e superamento prova di apprendimento.</p>
+      </details>
+      <details class="p-4 rounded-xl border">
+        <summary class="font-semibold cursor-pointer">Fate anche aggiornamenti?</summary>
+        <p class="mt-2 text-slate-700">Sì, per tutti i livelli (1-2-3) con durate previste dal D.M. 2/9/2021.</p>
+      </details>
+      <details class="p-4 rounded-xl border">
+        <summary class="font-semibold cursor-pointer">È possibile farlo presso la nostra sede?</summary>
+        <p class="mt-2 text-slate-700">Certo. Portiamo noi attrezzatura e materiali per le esercitazioni pratiche.</p>
+      </details>
+    </div>
       <p class="mt-8 text-center">
         <a href="#preventivo" class="inline-block px-5 py-3 rounded-xl bg-red-600 text-white font-semibold">Richiedi ora un preventivo</a>
       </p>
